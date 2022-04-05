@@ -20,15 +20,10 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-
-        System.out.println("ex");
         myWebView.loadUrl("https://www.google.se");
     }
 
-    public void showInternalWebPage()
-
-    {
-        System.out.println("in");
+    public void showInternalWebPage() {
         myWebView.loadUrl("file:///android_asset/index.html");
     }
 
