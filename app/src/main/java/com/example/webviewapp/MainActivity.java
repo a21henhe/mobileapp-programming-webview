@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
     }
 
     public void showInternalWebPage(){
@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         WebViewClient webViewClient = new WebViewClient();
         myWebView.setWebViewClient(webViewClient);
 
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+
+        myWebView.loadUrl("https://www.arngren.net");
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
